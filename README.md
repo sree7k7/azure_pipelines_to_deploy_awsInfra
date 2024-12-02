@@ -12,8 +12,10 @@ Using Azure repo and pipelines, deploy the aws infrastructure using IAM credenti
 
 ## Implementation
 
-- Create Azure repo. Clone it!
-- Add the below code
+- Create Azure repo. Clone it. empty one.
+- Inititate the cdk project. Eg. ```cdk init app --language python```
+- Add the below code to deploy/azure_pipeline.yml
+
 ```
 trigger:
 - main
