@@ -64,4 +64,8 @@ steps:
     AWS_DEFAULT_REGION: $(AWS_DEFAULT_REGION)
 ```
 - Creating the service connection:
-    - Go to -> Project settings -> click: service connection -> select: AWS plugin -> add aws IAM user access and secret keys.
+    - Go to -> Project settings -> click: service connection -> select: AWS plugin -> add aws IAM user access and secret keys.![alt text](<pics/Screenshot 2024-12-02 at 10.30.22.png>)
+    - Give a name and add AWS IAM User *Access* and *Secret* keys.
+    - Create the pipeline using Azure repo.
+    - Add the variables/keys shown below:![alt text](<pics/Screenshot 2024-12-02 at 11.21.01.png>)
+    - Save it.
