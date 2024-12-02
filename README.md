@@ -13,19 +13,19 @@ Using Azure repo and pipelines, deploy the aws infrastructure. The code is used 
 
 ## Pre-requisites
 
-- AWS [CDK](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html).
+- [CDK](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html).
 - AWS [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) credentials.
 - AWS [plugin](https://marketplace.visualstudio.com/search?term=aws&target=AzureDevOps&category=All%20categories&sortBy=Relevance) in Azure DevOps (*Which helps on making service connection under auzure devops project*).![alt text](<pics/Screenshot 2024-11-29 at 15.32.57.png>)
-- Select the DevOps to install.
+- Select the DevOps org to install.
 
 ## Implementation
 
-- Create Azure repo ![alt text](icons8-git-18.png). Clone it. empty one.
+- Create Azure repo ![alt text](icons8-git-18.png). Clone it. Empty one.
 - Inititate the cdk project. Eg. ```cdk init app --language python```
 - Add the below code to deploy/azure_pipeline.yml
 
 
-```
+```yaml
 trigger:
 - main
 - master
@@ -72,13 +72,15 @@ steps:
     AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
     AWS_DEFAULT_REGION: $(AWS_DEFAULT_REGION)
 ```
+
 - Creating the service connection:
-    - Go to -> Project settings -> click: service connection -> select: AWS plugin -> add aws IAM user access and secret keys.![alt text](<pics/Screenshot 2024-12-02 at 10.30.22.png>)
+
+    - Go to → Project settings → click: service connection → select: AWS plugin → add aws IAM user access and secret keys.![alt text](<pics/Screenshot 2024-12-02 at 10.30.22.png>)
     - Give a name and add AWS IAM User *Access* and *Secret* keys.
     - Create the pipeline using Azure repo.
     - Add the variables/keys shown below:![alt text](<pics/Screenshot 2024-12-02 at 11.21.01.png>)
-    - Save it.
+    - The variables names should match the ```azure_pipeline.yml```. Save it.
 
 ## Pipeline execution
 
-To deploy the resouces add any resource to the code and commit the changes.
+To deploy the resources in AWS, add any resource (e.g: s3) to the code and commit the changes.
