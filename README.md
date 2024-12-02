@@ -1,5 +1,12 @@
 # Deploy AWS infra using Azure repo, pipelines
 
+## rUn
+
+- [Purpose](#purpose)
+- [Pre-requisites](#pre-requisites)
+- [Implementation](#implementation)
+- [Pipeline Execution](#pipeline-execution)
+
 ## Purpose
 
 Using Azure repo and pipelines, deploy the aws infrastructure using IAM credentials. The code is used here, *aws cdk python*.
