@@ -25,7 +25,7 @@ Using Azure repo and pipelines, deploy the aws infrastructure. The code is used 
 - Add the below code to deploy/azure_pipeline.yml
 
 
-```yaml
+```
 trigger:
 - main
 - master
