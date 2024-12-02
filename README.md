@@ -71,3 +71,7 @@ steps:
     - Create the pipeline using Azure repo.
     - Add the variables/keys shown below:![alt text](<pics/Screenshot 2024-12-02 at 11.21.01.png>)
     - Save it.
+
+## Pipeline execution
+
+To deploy the resouces add any resource to the code and commit the changes.
