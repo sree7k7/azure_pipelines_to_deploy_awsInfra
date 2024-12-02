@@ -6,7 +6,8 @@ Using Azure repo and pipelines, deploy the aws infrastructure using IAM credenti
 
 ## Pre-requisites
 
-- AWS IAM credentials.
+- AWS [CDK](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html).
+- AWS [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) credentials.
 - AWS [plugin](https://marketplace.visualstudio.com/search?term=aws&target=AzureDevOps&category=All%20categories&sortBy=Relevance) in Azure DevOps (*Which helps on making service connection under auzure devops project*).![alt text](<pics/Screenshot 2024-11-29 at 15.32.57.png>)
 - Select the DevOps to install.
 
