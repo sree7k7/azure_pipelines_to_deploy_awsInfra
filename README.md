@@ -9,7 +9,7 @@
 
 ## Purpose
 
-Using Azure repo and pipelines, deploy the aws infrastructure using IAM credentials. The code is used here, *aws cdk python*.
+Using Azure repo and pipelines, deploy the aws infrastructure. The code is used here: *aws cdk python*.
 
 ## Pre-requisites
 
