@@ -22,5 +22,9 @@ class AzurePipelinesToDeployAwsInfraStack(Stack):
         # )
         bucket_s3 = s3.Bucket(self, "AzurePipelinesToDeployAwsInfraBucket",
             versioned=True,
-            removal_policy=RemovalPolicy.DESTROY
+            removal_policy=RemovalPolicy.DESTROY,
+            auto_delete_objects=True,
+            block_public_access=s3.BlockPublicAccess.BLOCK_ALL,
+            encryption=s3.BucketEncryption.S3_MANAGED,
+            enforce_ssl=True
         )
